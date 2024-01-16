@@ -17,6 +17,7 @@ import hr.ferit.filipleskovic.DogHelper.data.BreedViewModel
 import hr.ferit.filipleskovic.DogHelper.data.BreedsRepository
 import hr.ferit.filipleskovic.DogHelper.ui.theme.BottomNavigation
 import hr.ferit.filipleskovic.DogHelper.ui.theme.BreedScreen
+import hr.ferit.filipleskovic.DogHelper.ui.theme.FavouritesScreen
 import hr.ferit.filipleskovic.DogHelper.ui.theme.HomeScreen
 
 object Routes {
@@ -71,8 +72,7 @@ fun MainScreen(
                     }
                 }
                 composable(Routes.SCREEN_FAVOURITE_BREEDS) {
-                    HomeScreen(navigation = navController, viewModel = BreedViewModel(repository))
-                }
+                    FavouritesScreen(navigation= navController, viewModel = BreedViewModel(repository))                }
             }
         }
 

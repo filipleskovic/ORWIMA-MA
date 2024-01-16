@@ -10,6 +10,7 @@ import androidx.navigation.navArgument
 import hr.ferit.filipleskovic.DogHelper.data.Breed
 import hr.ferit.filipleskovic.DogHelper.data.BreedViewModel
 import hr.ferit.filipleskovic.DogHelper.ui.theme.BreedScreen
+import hr.ferit.filipleskovic.DogHelper.ui.theme.FavouritesScreen
 import hr.ferit.filipleskovic.DogHelper.ui.theme.HomeScreen
 
 
@@ -43,7 +44,7 @@ fun NavigationController(
             }
         }
         composable(Routes.SCREEN_FAVOURITE_BREEDS) {
-            HomeScreen(navigation = navController, viewModel = BreedViewModel(repository))
+            FavouritesScreen(navController, viewModel = BreedViewModel(repository))
         }
     }
 }

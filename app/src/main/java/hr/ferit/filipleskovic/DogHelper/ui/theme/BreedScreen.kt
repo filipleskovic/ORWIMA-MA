@@ -110,7 +110,7 @@ fun BottomNavigation(
             navigation.navigate(Routes.SCREEN_ALL_BREEDS)
         }
         ActiveButton(name = "Favourite", icon = Icons.Filled.StarBorder) {
-            navigation.navigate(Routes.SCREEN_ALL_BREEDS)
+            navigation.navigate(Routes.SCREEN_FAVOURITE_BREEDS)
         }
     }
 

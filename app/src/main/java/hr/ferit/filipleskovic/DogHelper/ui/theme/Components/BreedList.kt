@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import hr.ferit.filipleskovic.DogHelper.Routes
@@ -17,14 +18,14 @@ import hr.ferit.filipleskovic.DogHelper.ui.theme.LightOragne
 import hr.ferit.filipleskovic.DogHelper.ui.theme.LightYellow
 
 @Composable
-fun <T> EasyGrid(nColumns: Int, items: List<T> , content: @Composable (T) -> Unit) {
+fun <T> EasyGrid(nRows:Int,nColumns: Int, items: List<T> , content: @Composable (T) -> Unit) {
     Column(
         Modifier
             .padding(16.dp)
     ) {
-        for (i in items.indices step 2) {
+        for (i in items.indices step nRows) {
             Row(
-                modifier = Modifier.background(color = LightYellow)
+                modifier = Modifier.background(color = LightOragne)
             ) {
                 for (j in 0 until nColumns) {
                     if (i + j < items.size) {
@@ -50,10 +51,12 @@ fun <T> EasyGrid(nColumns: Int, items: List<T> , content: @Composable (T) -> Uni
 
 @Composable
 fun BreedList(
+    nRows:Int,
+    nColumns: Int,
     breeds: List<Breed>,
     navigation: NavHostController
 ) {
-    EasyGrid(nColumns = 2, items = breeds) {
+    EasyGrid(nRows=2,nColumns = 2, items = breeds) {
         BreedCard( it.image, it.name)
         {
             navigation.navigate(

@@ -90,7 +90,7 @@ fun HomeScreen(
                 labelText = "Looking for dog?",
                 viewModel=viewModel
             )
-            BreedList(breeds,navigation)
+            BreedList(2,2,breeds,navigation)
 
 
         }
