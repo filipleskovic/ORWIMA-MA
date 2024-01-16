@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "500296505101",
+    "project_id": "doghelper-1072d",
+    "storage_bucket": "doghelper-1072d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:500296505101:android:911f6d95343448d7f98244",
+        "android_client_info": {
+          "package_name": "hr.ferit.filipleskovic.DogHelper"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqTDGqfsDdh_g7HHLDnrAeV1vQTFa714Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
