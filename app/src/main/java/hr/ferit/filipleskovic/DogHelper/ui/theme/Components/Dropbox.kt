@@ -19,6 +19,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import hr.ferit.filipleskovic.DogHelper.data.BreedViewModel
+import hr.ferit.filipleskovic.DogHelper.ui.theme.Browny
 import hr.ferit.filipleskovic.DogHelper.ui.theme.Orange
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -43,7 +44,7 @@ fun Dropbox(
             Icon(
                 imageVector = Icons.Filled.Sort,
                 contentDescription = null,
-                tint = Orange
+                tint = Browny
             )
         }
         DropdownMenu(expanded = isExpanded, onDismissRequest = { isExpanded = false }) {

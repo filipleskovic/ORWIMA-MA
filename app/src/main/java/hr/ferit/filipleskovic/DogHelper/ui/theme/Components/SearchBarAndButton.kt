@@ -26,6 +26,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import hr.ferit.filipleskovic.DogHelper.data.BreedViewModel
 import hr.ferit.filipleskovic.DogHelper.ui.theme.Brown
+import hr.ferit.filipleskovic.DogHelper.ui.theme.Browny
 import hr.ferit.filipleskovic.DogHelper.ui.theme.Components.Dropbox
 import hr.ferit.filipleskovic.DogHelper.ui.theme.Orange
 
@@ -38,15 +39,15 @@ fun SearchBarAndButton(
     viewModel: BreedViewModel,
     onClick: () -> Unit = {},
     colors: TextFieldColors = TextFieldDefaults.colors(
-        focusedTextColor = Orange,
+        focusedTextColor = Browny,
         focusedContainerColor = Color.Transparent,
         unfocusedContainerColor = Color.Transparent,
         disabledContainerColor = Color.Transparent,
         focusedIndicatorColor = Color.Transparent,
         unfocusedIndicatorColor = Color.Transparent,
         disabledIndicatorColor = Color.Transparent,
-        unfocusedLabelColor = Orange,
-        focusedPlaceholderColor = Orange,
+        unfocusedLabelColor = Browny,
+        focusedPlaceholderColor = Browny,
     )
 ) {
     Column {
@@ -56,7 +57,7 @@ fun SearchBarAndButton(
             ),
             text = "Welcome, " + user,
             style = TextStyle(
-                color = Brown,
+                color = Browny,
                 fontSize = 16.sp,
                 fontFamily = FontFamily.Monospace
             )
@@ -69,7 +70,10 @@ fun SearchBarAndButton(
 
             TextField(
                 value = searchInput,
-                onValueChange = { searchInput = it },
+                onValueChange = {
+                    searchInput = it
+                    viewModel.filterByName(searchInput)
+                },
                 label = {
                     Text(labelText)
                 },
@@ -77,7 +81,7 @@ fun SearchBarAndButton(
                     Icon(
                         painter = painterResource(id = iconResource),
                         contentDescription = labelText,
-                        tint = Orange,
+                        tint = Browny,
                         modifier = Modifier
                             .width(16.dp)
                             .height(16.dp)

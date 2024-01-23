@@ -19,7 +19,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import hr.ferit.filipleskovic.DogHelper.data.BreedsRepository
-import hr.ferit.filipleskovic.DogHelper.ui.theme.BottomNavigation
 import hr.ferit.filipleskovic.DogHelper.ui.theme.MyApplicationTheme
 
 

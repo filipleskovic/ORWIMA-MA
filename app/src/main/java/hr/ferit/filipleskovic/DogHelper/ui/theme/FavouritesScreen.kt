@@ -37,8 +37,6 @@ fun FavouritesScreen(
             ScreenTitle("Favorites")
             FavouriteList(nRows = 1, nColumns =1 , breeds =breeds , navigation =navigation )
 
-
-
         }
     }
 }

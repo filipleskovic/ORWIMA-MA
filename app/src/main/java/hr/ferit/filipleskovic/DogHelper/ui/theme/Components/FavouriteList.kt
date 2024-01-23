@@ -16,10 +16,12 @@ fun FavouriteList(
     navigation: NavHostController
 ) {
     EasyGrid(nRows = nRows, nColumns = nColumns, items = breeds) {
-        FavouriteCard(breed = it) {
-            navigation.navigate(
-                Routes.getRecipeDetailsPath(it.id)
-            )
+        if(it.isFavorited) {
+            FavouriteCard(breed = it) {
+                navigation.navigate(
+                    Routes.getBreedDetailsPath(it.id)
+                )
+            }
         }
     }
 }

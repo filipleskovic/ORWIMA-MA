@@ -1,5 +1,6 @@
 package hr.ferit.filipleskovic.DogHelper.data
 
+import androidx.compose.ui.text.capitalize
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -18,8 +19,8 @@ class BreedViewModel(repository: BreedsRepository) : ViewModel() {
 
     init {
         viewModelScope.launch {
-            repository.fetchBreed().collect{
-                _breeds.value=it
+            repository.fetchBreed().collect {
+                _breeds.value = it
             }
 
         }
@@ -28,7 +29,16 @@ class BreedViewModel(repository: BreedsRepository) : ViewModel() {
     fun sortByName() {
         _breeds.update { _breeds.value.sortedBy { it.name } }
     }
+
     fun sortBySheeding() {
         _breeds.update { _breeds.value.sortedBy { it.sheeding } }
+    }
+
+    fun filterByName(name: String) {
+        if (name.isEmpty()) {
+            _breeds.update { breeds.value }
+        } else {
+            _breeds.update { breeds.value.filter { breed: Breed -> breed.name.startsWith(name.capitalize()) } }
+        }
     }
 }

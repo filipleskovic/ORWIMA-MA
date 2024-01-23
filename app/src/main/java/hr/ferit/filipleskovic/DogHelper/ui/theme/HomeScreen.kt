@@ -66,10 +66,9 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.toList
 
 
-
 @Composable
 fun HomeScreen(
-    navigation :NavHostController,
+    navigation: NavHostController,
     viewModel: BreedViewModel
 ) {
 
@@ -88,11 +87,9 @@ fun HomeScreen(
                 "User",
                 iconResource = R.drawable.ic_search,
                 labelText = "Looking for dog?",
-                viewModel=viewModel
+                viewModel = viewModel
             )
-            BreedList(2,2,breeds,navigation)
-
-
+            BreedList(2, 2, breeds, navigation)
         }
     }
 }

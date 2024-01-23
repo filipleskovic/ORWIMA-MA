@@ -11,6 +11,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import hr.ferit.filipleskovic.DogHelper.ui.theme.Browny
 import hr.ferit.filipleskovic.DogHelper.ui.theme.Orange
 
 @Composable
@@ -20,7 +21,7 @@ fun ScreenTitle(
     Text(
         text = text,
         style = TextStyle(
-            color = Orange,
+            color = Browny,
             fontSize = 40.sp,
             fontFamily = FontFamily.Monospace
         ),

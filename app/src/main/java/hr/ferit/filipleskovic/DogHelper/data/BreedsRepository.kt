@@ -12,8 +12,6 @@ class BreedsRepository {
     private val db = Firebase.firestore
 
     val breedsData = mutableStateListOf<Breed>()
-
-
     init {
         fetchDatabaseData()
     }
@@ -52,6 +50,7 @@ class BreedsRepository {
         }
         emit(breeds)
     }
+
 }
 
 

@@ -60,7 +60,7 @@ fun BreedList(
         BreedCard( it.image, it.name)
         {
             navigation.navigate(
-                Routes.getRecipeDetailsPath(it.id)
+                Routes.getBreedDetailsPath(it.id)
             )
         }
     }

@@ -29,7 +29,7 @@ import hr.ferit.filipleskovic.DogHelper.ui.theme.LightYellow
 fun BreedCard(
     imageResource: String,
     name: String,
-    onClick: () -> Unit
+    onClick: () -> Unit = {},
 ) {
     Card(
         modifier = Modifier
